@@ -477,3 +477,71 @@ to {
  margin-top: 11px;
 }
 }
+  .slide .caption {
+	position: absolute;
+	left: 0;
+	bottom: 5%;
+	font-size: 5rem;
+	font-weight: 600;
+	color: white;
+	text-transform: capitalize;
+	background: rgba(0, 0, 0, 0.348);
+	backdrop-filter: blur(10px);
+	padding: 1rem 5rem;
+	border-radius: 0 2rem 2rem 0;
+  }
+
+/* Styling the area of the slides */
+#slideshow {
+	position: relative;
+	width: 600%;
+	height: 40rem;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	overflow: hidden;
+}
+
+/* Style each of the sides 
+  with a fixed width and height */
+.slide img{
+    float: left;
+    height: 510px;
+    width: 700px;
+}
+
+/* Add animation to the slides */
+.slide-wrapper {
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(728px * 4);
+
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 10s ease infinite;
+}
+
+
+/* Define the animation 
+  for the slideshow */
+@keyframes slide {
+
+    /* Calculate the margin-left for 
+    each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+
+    60% {
+        margin-left: calc(-728px * 2);
+    }
+
+    80% {
+        margin-left: calc(-728px * 3);
+    }
+}
